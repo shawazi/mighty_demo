@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Box, Button } from "@chakra-ui/react";
+import { UnlockIcon, LockIcon } from "@chakra-ui/icons";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,23 +9,17 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Increment Something</h1>
+
+
+        <h1>Total Coins: {count}</h1></div>
+
       <div className="card">
         <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
-        
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="center"><Box bg="teal" w="300%" p={4} color="white" m="auto"><LockIcon boxSize={30} /><UnlockIcon boxSize={30} /><Button variant="primary">Button</Button></Box></div>
     </>
   )
 }
